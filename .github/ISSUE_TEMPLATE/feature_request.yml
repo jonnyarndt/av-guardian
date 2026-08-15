@@ -1,0 +1,41 @@
+name: Feature Request
+description: Suggest a new feature or improvement
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion! Describe the feature you'd like to see.
+
+  - type: dropdown
+    id: role
+    attributes:
+      label: I am a...
+      options:
+        - Homeowner
+        - Dealer / Installer
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does this solve?
+      placeholder: Describe the pain point or gap you've identified.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Describe the solution you'd like
+      placeholder: What would the feature look like? How would you use it?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you have considered
+      placeholder: Are there workarounds you are currently using?

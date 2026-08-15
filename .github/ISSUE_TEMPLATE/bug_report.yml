@@ -1,0 +1,59 @@
+name: Bug Report
+description: Report something that is not working as expected
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug.
+
+        **Important:** Please do **not** include passwords, IP addresses, Wi-Fi network names, home addresses, or any personal information in this report.
+
+  - type: dropdown
+    id: role
+    attributes:
+      label: I am a...
+      options:
+        - Homeowner
+        - Dealer / Installer
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where did this happen?
+      options:
+        - Cloud Dashboard (browser)
+        - Device Local Interface (browser on Pi)
+        - Mobile browser
+        - During setup / installation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      placeholder: Describe the bug clearly. What did you expect to happen instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Go to...
+        2. Click on...
+        3. See error
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: App version (if known)
+      placeholder: e.g. 1.34.0 — shown in the dashboard footer or device info page
