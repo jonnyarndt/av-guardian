@@ -14,7 +14,7 @@ body:
     attributes:
       label: I am a...
       options:
-        - Homeowner
+        - End-User
         - Dealer / Installer
         - Other
     validations:
