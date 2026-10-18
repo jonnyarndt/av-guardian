@@ -16,7 +16,7 @@ description: Update the AV Guardian public website (home.avedge.io) so its copy 
    classes and `brand.*` colours from `tailwind.config.ts`, Inter.
 4. **Check it builds:** `npm ci && npm run build`. Run `npm run dev` and look at it at phone
    width as well as desktop if you can.
-5. **Placeholders stay visible** (`[CARD PRICE]`) until Jonathan gives a value. Never invent
+5. **Placeholders stay visible** (for example `[PRICE]`) until Jonathan gives a value. Never invent
    prices, statistics or quotes.
 6. **Commit locally and stop.** Pushing `main` publishes the live site immediately
    (GitHub Pages). Push only when he says so, and tell him it will go live.
@@ -25,5 +25,5 @@ Checklist of claims that drift (re-check each release):
 - Raspberry Pi 5 only.
 - Video limits (40 MB / about 1 minute per video today).
 - Offline use: lifetime licence or 30-day demo, set-up from a laptop, update by file.
-- Pricing tiers and what each includes.
+- Pricing tiers and what each includes; ready card $50 plus shipping and handling.
 - Anything about the integration API (not yet released).

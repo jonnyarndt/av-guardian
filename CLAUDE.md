@@ -43,8 +43,9 @@ npm run build      # tsc + vite build into dist/ (what the deploy runs)
   **40 MB (about 1 minute) per video** today. Update this when the upload cap is lifted.
 - **Pricing (approved 2026-10-17):** Starter $6/month (1 screen, 1 Pi, 1 cloud connection);
   Stand-alone $10 lifetime licence on the firmware it was installed with, each firmware
-  update on request another $10; Dealer by volume. Pre-imaged 32 GB A2 microSD price: TBD
-  (use a visible placeholder, never invent one).
+  update on request another $10; Dealer by volume. Pre-imaged 32 GB A2 microSD card: $50 each,
+  plus shipping and handling (set high on purpose, as card prices move). Never invent a
+  price that isn't listed here.
 - Plain, concrete language for AV integrators and venue owners. No invented statistics or
   testimonials; a real quote needs the pilot site's permission.
 - Mockups for this round: https://claude.ai/artifact/F7fZmNxXUJcwexNH9S7RwU

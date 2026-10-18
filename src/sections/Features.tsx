@@ -1,58 +1,76 @@
-const features = [
+import type { ReactNode } from 'react'
+
+type Feature = { icon: ReactNode; title: string; description: string; isNew?: boolean }
+
+const features: Feature[] = [
   {
-    icon: '📡',
-    title: 'Remote Monitoring',
+    isNew: true,
+    icon: <><rect x="2" y="5" width="20" height="14" rx="2" /><path d="M10 9l5 3-5 3z" /></>,
+    title: 'Images and video',
     description:
-      'See display online/offline status, CEC power state, and connectivity for every screen — from one dashboard, anytime.',
+      'Mix JPEG, PNG and MP4 in one playlist. Videos play to their end, then the next item follows. Up to 40 MB per video (about 1 minute); up to 4K, smoothest at 24 fps in 4K and 60 fps in 1080p.',
   },
   {
-    icon: '⚡',
-    title: 'Zero-Touch Setup',
+    isNew: true,
+    icon: <><path d="M2 2l20 20" /><path d="M8.5 16.5a5 5 0 0 1 7 0" /><path d="M5 12.9a10 10 0 0 1 5.2-2.8" /><circle cx="12" cy="20" r="1" /></>,
+    title: 'Works without the internet',
     description:
-      'Ship a device to the site. It boots, shows a claim QR code on the display itself, and appears in your dashboard once scanned — no SSH, no config.',
+      'A one-time licence or a 30-day demo runs a display with no cloud account. Set it up from a laptop on the same network, or cabled straight to the Pi.',
   },
   {
-    icon: '🔄',
-    title: 'Secure OTA Updates',
+    isNew: true,
+    icon: <><rect x="3" y="4" width="18" height="16" rx="2" /><path d="M9 9l6 3-6 3z" /></>,
+    title: 'Quick controls',
     description:
-      'Signed, atomic A/B firmware updates with automatic rollback on failure — push to one screen or your entire fleet with zero risk of bricking a device.',
+      'Play, Pause, Next, Previous and Blank from the browser. Jump to any item, or hide one from the rotation without deleting it.',
   },
   {
-    icon: '🖥️',
-    title: 'Digital Signage & Scheduling',
+    icon: <path d="M3 12h4l3-8 4 16 3-8h4" />,
+    title: 'Remote monitoring',
     description:
-      'Cloud image library and CEC display power scheduling, with content fan-out to a single screen, a whole site, or your entire org.',
+      "Online status, CEC power state, what is on screen and the display's own model and resolution, for every screen, from one dashboard.",
   },
   {
-    icon: '🔗',
-    title: 'Site-Wide Sync',
+    icon: <><rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /><path d="M14 17h7M17.5 14v7" /></>,
+    title: 'Zero-touch setup',
     description:
-      'Every display at a site plays the same content in lockstep — NTP-locked, no ongoing cloud connection required to stay in sync.',
+      "The display shows a QR code. Online, it claims the screen to your account; offline, it opens the Pi's own setup page.",
   },
   {
-    icon: '✨',
-    title: 'Smooth Transitions',
+    icon: <><path d="M21 12a9 9 0 1 1-3-6.7" /><path d="M21 4v5h-5" /></>,
+    title: 'Secure updates, online or not',
     description:
-      'GPU-assisted crossfades and effects between images — smooth, professional-looking signage, not a slideshow.',
+      'Signed A/B firmware with automatic rollback. Push from the cloud, or upload the file at the screen itself, with no internet needed.',
   },
   {
-    icon: '🔔',
-    title: 'Schedule Activity & Offline Resilience',
+    icon: <><rect x="3" y="4" width="18" height="17" rx="2" /><path d="M3 9h18M8 2v4M16 2v4" /></>,
+    title: 'CEC power schedule',
     description:
-      'Every scheduled content or power change is logged and auditable. If the internet drops, displays keep running on their last-known schedule and back-fill the log once reconnected.',
+      'Turn displays on and off by day and time over HDMI-CEC, for one screen, a site or the whole organization. Every change is logged.',
+  },
+  {
+    icon: <><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1" /><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1" /></>,
+    title: 'Site-wide sync',
+    description:
+      'Every display at a site plays the same item at the same moment, locked to network time, with no live cloud connection needed to stay in step.',
+  },
+  {
+    icon: <><path d="M4 12c4-8 12-8 16 0" /><path d="M4 12c4 8 12 8 16 0" /></>,
+    title: 'Smooth transitions',
+    description: 'Crossfades and effects between items, so it looks like signage, not a slideshow.',
   },
 ]
 
 export default function Features() {
   return (
     <section id="features" className="bg-slate-50 py-24 px-6">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4 tracking-tight">
             Everything your signage needs
           </h2>
           <p className="text-slate-500 text-lg max-w-xl mx-auto">
-            Built for AV dealers, installers, and the venues they serve.
+            Built for AV dealers, installers and the venues they serve: one screen or a whole fleet.
           </p>
         </div>
 
@@ -60,10 +78,19 @@ export default function Features() {
           {features.map(f => (
             <div
               key={f.title}
-              className="bg-white rounded-xl border border-slate-200 p-6 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+              className={`bg-white rounded-xl p-6 flex flex-col gap-2.5 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 ${
+                f.isNew ? 'border-2 border-brand-blue' : 'border border-slate-200'
+              }`}
             >
-              <span className="text-2xl mb-4 block">{f.icon}</span>
-              <h3 className="font-semibold text-slate-900 mb-2">{f.title}</h3>
+              <div className="flex justify-between items-center">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1d4ed8" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  {f.icon}
+                </svg>
+                {f.isNew && (
+                  <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-900">NEW</span>
+                )}
+              </div>
+              <h3 className="font-bold text-slate-900">{f.title}</h3>
               <p className="text-sm text-slate-500 leading-relaxed">{f.description}</p>
             </div>
           ))}
