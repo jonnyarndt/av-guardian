@@ -8,10 +8,6 @@ const points = [
     title: 'Update it by file.',
     text: 'Ask for a new firmware ($10 per update) and upload it in the browser; it installs, and rolls back on its own if anything goes wrong.',
   },
-  {
-    title: 'Connect it later if you like.',
-    text: 'Plug in the internet and the same screen can join your cloud dashboard.',
-  },
 ]
 
 // A stand-in QR pattern (5×5); 1 = dark square.

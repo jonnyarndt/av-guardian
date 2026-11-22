@@ -25,34 +25,22 @@ const features: Feature[] = [
       'Play, Pause, Next, Previous and Blank from the browser. Jump to any item, or hide one from the rotation without deleting it.',
   },
   {
-    icon: <path d="M3 12h4l3-8 4 16 3-8h4" />,
-    title: 'Remote monitoring',
-    description:
-      "Online status, CEC power state, what is on screen and the display's own model and resolution, for every screen, from one dashboard.",
-  },
-  {
     icon: <><rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /><path d="M14 17h7M17.5 14v7" /></>,
-    title: 'Zero-touch setup',
+    title: 'Easy setup',
     description:
-      "The display shows a QR code. Online, it claims the screen to your account; offline, it opens the Pi's own setup page.",
+      "The display shows its address and a QR code. Scan it, or open the address from a laptop, to reach the Pi's own setup page.",
   },
   {
     icon: <><path d="M21 12a9 9 0 1 1-3-6.7" /><path d="M21 4v5h-5" /></>,
-    title: 'Secure updates, online or not',
+    title: 'Secure updates by file',
     description:
-      'Signed A/B firmware with automatic rollback. Push from the cloud, or upload the file at the screen itself, with no internet needed.',
+      'Signed A/B firmware with automatic rollback. Upload the update file in the browser at the screen, with no internet needed.',
   },
   {
     icon: <><rect x="3" y="4" width="18" height="17" rx="2" /><path d="M3 9h18M8 2v4M16 2v4" /></>,
     title: 'CEC power schedule',
     description:
-      'Turn displays on and off by day and time over HDMI-CEC, for one screen, a site or the whole organization. Every change is logged.',
-  },
-  {
-    icon: <><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1" /><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1" /></>,
-    title: 'Site-wide sync',
-    description:
-      'Every display at a site plays the same item at the same moment, locked to network time, with no live cloud connection needed to stay in step.',
+      'Turn the display on and off by day and time over HDMI-CEC, so the screen is only on when it needs to be.',
   },
   {
     icon: <><path d="M4 12c4-8 12-8 16 0" /><path d="M4 12c4 8 12 8 16 0" /></>,
@@ -70,7 +58,7 @@ export default function Features() {
             Everything your signage needs
           </h2>
           <p className="text-slate-500 text-lg max-w-xl mx-auto">
-            Built for AV dealers, installers and the venues they serve: one screen or a whole fleet.
+            Built for AV dealers, installers and the venues they serve.
           </p>
         </div>
 

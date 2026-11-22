@@ -5,7 +5,6 @@ import Features from './sections/Features'
 import HowItWorks from './sections/HowItWorks'
 import Offline from './sections/Offline'
 import Pricing from './sections/Pricing'
-import Dealers from './sections/Dealers'
 import Contact from './sections/Contact'
 
 export default function App() {
@@ -18,7 +17,6 @@ export default function App() {
         <Offline />
         <HowItWorks />
         <Pricing />
-        <Dealers />
         <Contact />
       </main>
       <Footer />

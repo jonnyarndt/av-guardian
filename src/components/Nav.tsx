@@ -5,7 +5,6 @@ const links = [
   { label: 'Offline',      href: '#offline' },
   { label: 'How It Works', href: '#how-it-works' },
   { label: 'Pricing',      href: '#pricing' },
-  { label: 'For Dealers',  href: '#dealers' },
 ]
 
 export default function Nav() {
@@ -42,7 +41,7 @@ export default function Nav() {
             href="#contact"
             className="px-5 py-2 rounded-lg text-sm font-semibold bg-brand-blue hover:bg-brand-blue-dark text-white transition-colors"
           >
-            Request Access
+            Contact
           </a>
         </div>
 
@@ -82,7 +81,7 @@ export default function Nav() {
             onClick={() => setOpen(false)}
             className="mt-4 block text-center px-4 py-2.5 rounded-lg text-sm font-semibold bg-brand-blue text-white"
           >
-            Request Access
+            Contact
           </a>
         </div>
       )}

@@ -13,22 +13,6 @@ const VIDEO = 'Images and video, up to 4K (40 MB, about 1 minute, per video)'
 
 const plans: Plan[] = [
   {
-    eyebrow: 'One screen, online',
-    name: 'Starter',
-    price: '$6',
-    unit: '/month',
-    note: '1 screen · 1 Pi · 1 cloud connection',
-    items: [
-      'Remote monitoring and alerts',
-      VIDEO,
-      'Cloud library and local upload',
-      'CEC power schedule',
-      'Updates pushed from the cloud',
-      'Pi Local UI',
-    ],
-    cta: 'Request Access',
-  },
-  {
     eyebrow: 'No internet needed',
     name: 'Stand-alone',
     price: '$10',
@@ -41,23 +25,19 @@ const plans: Plan[] = [
       'CEC power schedule',
       'Firmware updates on request: $10 each, installed by file upload',
       '30-day free demo first',
-      'Can join the cloud later',
     ],
     cta: 'Start a 30-day demo',
     featured: true,
   },
   {
-    eyebrow: 'Installers and fleets',
+    eyebrow: 'Installers and dealers',
     name: 'Dealer',
     price: 'Volume',
-    note: 'Pricing by fleet size · contact us',
+    note: 'Pricing by number of screens · contact us',
     items: [
-      'Everything in Starter',
-      'Multi-site fleet dashboard',
-      'Site-wide playback sync',
-      'Org-wide power and content schedules',
-      'Team and role management',
+      'Everything in Stand-alone',
       'Stand-alone licences at dealer rates',
+      'Pre-imaged microSD cards for your installs',
     ],
     cta: 'Contact Us',
   },
@@ -72,11 +52,11 @@ export default function Pricing() {
             Simple, transparent pricing
           </h2>
           <p className="text-slate-500 text-lg max-w-xl mx-auto">
-            Pay monthly for the cloud, or once for a screen that runs on its own.
+            Pay once for a screen that runs on its own. No subscription.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-5 items-stretch">
+        <div className="grid md:grid-cols-2 gap-5 items-stretch max-w-4xl mx-auto">
           {plans.map(p => (
             <div
               key={p.name}
@@ -130,6 +110,14 @@ export default function Pricing() {
             </div>
           ))}
         </div>
+
+        <p className="text-center text-sm text-slate-500 mt-8 max-w-2xl mx-auto">
+          Cloud fleet management is paused for now.{' '}
+          <a href="#contact" className="font-semibold text-brand-blue hover:text-brand-blue-dark">
+            Get in touch
+          </a>{' '}
+          if you need it.
+        </p>
       </div>
     </section>
   )

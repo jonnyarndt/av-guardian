@@ -41,9 +41,15 @@ npm run build      # tsc + vite build into dist/ (what the deploy runs)
 - **Raspberry Pi 5 only.** The firmware is built for the Pi 5; never mention the Pi 4.
 - **Video:** MP4 (H.264), up to 4K, smoothest at 24 fps in 4K and 60 fps in 1080p,
   **40 MB (about 1 minute) per video** today. Update this when the upload cap is lifted.
-- **Pricing (approved 2026-10-17):** Starter $6/month (1 screen, 1 Pi, 1 cloud connection);
+- **The cloud is paused (decided 2026-11-21).** The site sells a stand-alone product only:
+  no cloud plans, fleet dashboard, remote monitoring, alerts or remote updates. One line
+  says cloud fleet management is paused and to get in touch. The Dealers section
+  (`src/sections/Dealers.tsx`, all cloud benefits) is off the page but kept for if the cloud returns.
+- **Contact:** a plain email link to jonathan@automation-integration.com (his choice,
+  2026-11-21); the old form posted to the cloud (`portal.avedge.io/api/interest`), which is gone.
+- **Pricing (approved 2026-10-17; Starter $6/month removed 2026-11-21):**
   Stand-alone $10 lifetime licence on the firmware it was installed with, each firmware
-  update on request another $10; Dealer by volume. Pre-imaged 32 GB A2 microSD card: $50 each,
+  update on request another $10; Dealer by volume (dealer-rate licences, pre-imaged cards). Pre-imaged 32 GB A2 microSD card: $50 each,
   plus shipping and handling (set high on purpose, as card prices move). Never invent a
   price that isn't listed here.
 - Plain, concrete language for AV integrators and venue owners. No invented statistics or

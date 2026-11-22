@@ -66,18 +66,18 @@ export default function HowItWorks() {
 
           <Step n={3} title="Ask for a licence">
             <p className="text-sm leading-relaxed text-slate-500">
-              Before the demo ends, ask us for a licence key and enter it on the Pi. Choose:
+              Before the demo ends, ask us for a licence key and enter it on the Pi.
             </p>
             <div className="flex flex-col gap-2.5">
-              <Option title="Cloud, monthly or yearly">
-                Monitoring, alerts, remote updates and the fleet dashboard.
-              </Option>
               <Option title="Stand-alone, $10 once">
                 Runs on its own for the life of the Pi. Updates on request.
               </Option>
+              <Option title="Several screens?">
+                Ask about dealer rates.
+              </Option>
             </div>
             <a href="#pricing" className="mt-auto text-sm font-semibold text-brand-blue hover:text-brand-blue-dark">
-              Compare plans →
+              See pricing →
             </a>
           </Step>
         </div>

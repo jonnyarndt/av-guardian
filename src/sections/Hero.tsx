@@ -20,7 +20,7 @@ export default function Hero() {
               New: video, up to 4K
             </span>
             <span className="text-xs font-semibold px-3 py-1.5 rounded-full bg-brand-card text-brand-text">
-              Runs with or without the internet
+              No internet or subscription needed
             </span>
           </div>
 
@@ -30,9 +30,8 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl text-slate-300 max-w-xl leading-relaxed">
-            Images and video on any HDMI display, from a Raspberry Pi 5 behind the screen. Manage a
-            whole fleet from the cloud, or run a single screen on its own with a one-time licence and
-            no internet at all.
+            Images and video on any HDMI display, from a Raspberry Pi 5 behind the screen. It runs on
+            its own with a one-time licence: no subscription, no account and no internet needed.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -40,7 +39,7 @@ export default function Hero() {
               href="#contact"
               className="px-8 py-3.5 rounded-lg bg-brand-blue hover:bg-brand-blue-dark text-white font-semibold text-sm text-center transition-colors shadow-lg shadow-brand-blue/25"
             >
-              Request Access
+              Get in touch
             </a>
             <a
               href="#how-it-works"
